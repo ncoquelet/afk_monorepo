@@ -243,7 +243,7 @@ pub fn calculate_starting_price_launch(
 }
 
 // TODO verify price bonding curve
-// current sellable supply beofre launch
+// current sellable supply before launch
 pub fn calculate_pricing(threshold_liquidity: u256, sellable_supply: u256) -> u256 {
     assert(sellable_supply.clone() > 0, 'Sellable supply must sup 0');
     // let scaling_factor = 10;
