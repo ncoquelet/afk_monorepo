@@ -371,7 +371,7 @@ mod unrug_tests {
                 initial_supply: DEFAULT_INITIAL_SUPPLY(),
                 contract_address_salt: SALT() + 1
             );
-        println!("token_address unrug lp withouth launch curve: {:?}", token_address.clone());
+        println!("token_address unrug lp without launch curve: {:?}", token_address.clone());
 
         // start_cheat_caller_address(token_address, launchpad.contract_address);
 
