@@ -2,7 +2,7 @@ import {NDKKind} from '@nostr-dev-kit/ndk';
 import {useInfiniteQuery} from '@tanstack/react-query';
 
 import {useNostrContext} from '../../context/NostrContext';
-import { useNostrStore } from '../../store';
+import {useNostrStore} from '../../store';
 
 export type UseSearchSubscription = {
   authors?: string[];

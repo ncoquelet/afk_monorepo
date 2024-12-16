@@ -5,9 +5,7 @@ export const RELAYS_PROD = [
   // 'wss://relay.n057r.club', 'wss://relay.nostr.net',
 ];
 
-export const RELAYS_TEST = [
-  'wss://nos.lol'
-];
+export const RELAYS_TEST = ['wss://nos.lol'];
 
 // export const RELAYS_TEST = ['wss://relay.n057r.club', 'wss://relay.nostr.net'];
 
@@ -15,13 +13,7 @@ export const RELAY_AFK_PRODUCTION = 'wss://nostr-relay-nestjs-production.up.rail
 
 export const AFK_RELAYS =
   process.env.EXPO_NODE_ENV == 'production' ||
-    process.env.EXPO_PUBLIC_NODE_ENV == 'production' ||
-    process.env.NODE_ENV == 'production'
-    ? [
-      ...RELAYS_PROD,
-      'wss://nostr-relay-nestjs-production.up.railway.app',
-    ]
-    : [
-      'wss://nostr-relay-nestjs-production.up.railway.app',
-      ...RELAYS_TEST
-    ];
+  process.env.EXPO_PUBLIC_NODE_ENV == 'production' ||
+  process.env.NODE_ENV == 'production'
+    ? [...RELAYS_PROD, 'wss://nostr-relay-nestjs-production.up.railway.app']
+    : ['wss://nostr-relay-nestjs-production.up.railway.app', ...RELAYS_TEST];

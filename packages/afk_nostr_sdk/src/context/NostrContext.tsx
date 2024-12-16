@@ -47,8 +47,8 @@ export const NostrProvider: React.FC<React.PropsWithChildren> = ({children}) => 
       signer: privateKey
         ? new NDKPrivateKeySigner(privateKey)
         : isExtension
-        ? nip07Signer
-        : undefined,
+          ? nip07Signer
+          : undefined,
     });
     console.log('test');
 

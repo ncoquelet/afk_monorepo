@@ -18,7 +18,14 @@ export const useNotesFilter = (options?: UseSearch) => {
 
   return useInfiniteQuery({
     initialPageParam: 0,
-    queryKey: ['notesFilter', options?.authors, options?.search, options?.kind, options?.kinds, ndk],
+    queryKey: [
+      'notesFilter',
+      options?.authors,
+      options?.search,
+      options?.kind,
+      options?.kinds,
+      ndk,
+    ],
     getNextPageParam: (lastPage: any, allPages, lastPageParam) => {
       if (!lastPage?.length) return undefined;
 

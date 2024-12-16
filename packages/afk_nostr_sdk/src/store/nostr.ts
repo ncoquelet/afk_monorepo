@@ -13,7 +13,7 @@ type Action = {
 
 const getDefaultValue = () => {
   return {
-    notes:[]
+    notes: [],
   };
 };
 export const nostrStore = createStore<State & Action>((set, get) => ({
